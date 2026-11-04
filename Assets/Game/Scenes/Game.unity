@@ -806,29 +806,6 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
---- !u!1 &355700532 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4313755332391666000, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
-  m_PrefabInstance: {fileID: 6773933353493924816}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &355700539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 355700532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bca6ea3acfa5d114da2ead650c51bfe2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LightDetector
-  flashlight: {fileID: 562547232}
-  lightRange: 6
-  lightAngle: 60
-  wallMask:
-    serializedVersion: 2
-    m_Bits: 128
 --- !u!1 &513064303
 GameObject:
   m_ObjectHideFlags: 0
@@ -18149,60 +18126,48 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1204308023125826316, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1204308023125826316, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
-      propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 0.26
-      objectReference: {fileID: 0}
-    - target: {fileID: 1204308023125826316, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
-      propertyPath: m_SpriteTilingProperty.newSize.y
-      value: 0.47
-      objectReference: {fileID: 0}
-    - target: {fileID: 1204308023125826316, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.625
+      value: 22.57
       objectReference: {fileID: 0}
     - target: {fileID: 1204308023125826316, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.9375
+      value: 20.71
       objectReference: {fileID: 0}
+    - target: {fileID: 1708059615686878471, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
+      propertyPath: flashlight
+      value: 
+      objectReference: {fileID: 562547232}
     - target: {fileID: 4011578780700465025, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
       propertyPath: m_Size.x
-      value: 0.26
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 4011578780700465025, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
       propertyPath: m_Size.y
-      value: 0.47
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 4011578780700465025, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1364186699980225264, guid: a7e5677cf293ea24ca11d6b82a3376ac, type: 3}
+      objectReference: {fileID: 8546485020818550835, guid: de3ca32c72a8d6b478bffe980966a4cf, type: 3}
     - target: {fileID: 4011578780700465025, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4313755332391666000, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
       propertyPath: m_Name
-      value: ArmEnemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 4313755332391666000, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+      value: FistEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 5455539625037470031, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.4381412
+      propertyPath: m_LocalScale.x
+      value: 0.48356247
       objectReference: {fileID: 0}
     - target: {fileID: 5455539625037470031, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.35
+      value: 9.1
       objectReference: {fileID: 0}
     - target: {fileID: 5455539625037470031, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.57
+      value: 1.52
       objectReference: {fileID: 0}
     - target: {fileID: 5455539625037470031, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18236,53 +18201,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6932190956553348200, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
-      propertyPath: m_Speed
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8963790616618644905, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
-      propertyPath: fleeSpeed
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8963790616618644905, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
-      propertyPath: moveSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8963790616618644905, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
-      propertyPath: spawnPoint
-      value: 
-      objectReference: {fileID: 1465567949}
-    - target: {fileID: 8963790616618644905, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
-      propertyPath: fleeDistance
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 8963790616618644905, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
-      propertyPath: respawnDelay
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8963790616618644905, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
-      propertyPath: stunDuration
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8963790616618644905, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
-      propertyPath: lightDetector
-      value: 
-      objectReference: {fileID: 355700539}
-    - target: {fileID: 8963790616618644905, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
-      propertyPath: startingState
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8963790616618644905, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
-      propertyPath: lightExposureToDie
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4313755332391666000, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 355700539}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

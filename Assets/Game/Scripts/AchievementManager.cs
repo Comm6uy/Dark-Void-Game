@@ -26,12 +26,11 @@ public class AchievementManager : MonoBehaviour
     {
         if (Instance == null) { Instance = this; DontDestroyOnLoad(gameObject); }
         else { Destroy(gameObject); return; }
-
-        LoadAchievementsFromSaves();
     }
 
     void OnEnable()
     {
+        YG2.onGetSDKData += LoadAchievementsFromSaves;
         GameEvents.OnEnemyKilled += HandleEnemyKilled;
         GameEvents.OnLevelCompleted += HandleLevelCompleted;
         GameEvents.OnPlayerDied += HandlePlayerDied;
@@ -39,6 +38,7 @@ public class AchievementManager : MonoBehaviour
 
     void OnDisable()
     {
+        YG2.onGetSDKData -= LoadAchievementsFromSaves;
         GameEvents.OnEnemyKilled -= HandleEnemyKilled;
         GameEvents.OnLevelCompleted -= HandleLevelCompleted;
         GameEvents.OnPlayerDied -= HandlePlayerDied;

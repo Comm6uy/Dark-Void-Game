@@ -29,26 +29,12 @@ public class DailyQuestManager : MonoBehaviour
         else { Destroy(gameObject); return; }
 
         if (YG2.saves.claimedQuestIds == null) YG2.saves.claimedQuestIds = new List<string>();
-
-        string today = DateTime.Now.ToString("yyyy-MM-dd");
-        if (YG2.saves.lastQuestsDate != today)
-        {
-            YG2.saves.lastQuestsDate = today;
-            YG2.saves.claimedQuestIds.Clear(); // Сброс забранных наград
-            GenerateNewQuests();
-            YG2.SaveProgress();
-        }
-        else
-        {
-            // Если день тот же, просто генерируем их снова. 
-            // (В идеале прогресс нужно хранить в SavesYG, но для отображения этого достаточно, 
-            // так как GameEvents будут обновлять их в реальном времени)
-            GenerateNewQuests(); 
-        }
+        
     }
 
     void OnEnable()
     {
+        YG2.onGetSDKData += InitQuests;
         GameEvents.OnEnemyKilled += HandleEnemyKilled;
         GameEvents.OnLevelCompleted += HandleLevelCompleted;
         GameEvents.OnEnemyRepelled += HandleEnemyRepelled;
@@ -56,6 +42,7 @@ public class DailyQuestManager : MonoBehaviour
 
     void OnDisable()
     {
+        YG2.onGetSDKData -= InitQuests;
         GameEvents.OnEnemyKilled -= HandleEnemyKilled;
         GameEvents.OnLevelCompleted -= HandleLevelCompleted;
         GameEvents.OnEnemyRepelled -= HandleEnemyRepelled;
@@ -97,6 +84,22 @@ public class DailyQuestManager : MonoBehaviour
                 rewardCoins = questTemplates[i].rewardCoins,
                 type = questTemplates[i].type
             });
+        }
+    }
+
+    private void InitQuests()
+    {
+        string today = DateTime.Now.ToString("yyyy-MM-dd");
+        if (YG2.saves.lastQuestsDate != today)
+        {
+            YG2.saves.lastQuestsDate = today;
+            YG2.saves.claimedQuestIds.Clear(); // Сброс забранных наград
+            GenerateNewQuests();
+            YG2.SaveProgress();
+        }
+        else
+        {
+            GenerateNewQuests(); 
         }
     }
 
