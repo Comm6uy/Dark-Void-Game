@@ -9,6 +9,11 @@ public class GameManager : MonoBehaviour
     [Header("Экран смерти")]
     [SerializeField] private GameObject deathScreen;
 
+    [Header("Настройки раунда")]
+    [SerializeField] private float levelTime = 300f; // 5 минут на уровень
+    public float CurrentMoneyMultiplier { get; set; } = 1f;
+
+    private float currentTime;
     private bool isGameOver = false;
 
     void Awake()
@@ -19,94 +24,77 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        if (deathScreen != null)
-            deathScreen.SetActive(false);
-        
+        if (deathScreen != null) deathScreen.SetActive(false);
+        currentTime = levelTime;
         StartCoroutine(AutoSaveRoutine());
     }
-    
-    private void OnApplicationPause(bool pause)
+
+    void Update()
     {
-        if (pause)
+        if (isGameOver) return;
+
+        // Таймер раунда
+        if (currentTime > 0)
         {
-            Debug.Log("[GameManager] Игра свернута. Сохраняем прогресс...");
-            YG2.SaveProgress();
+            currentTime -= Time.deltaTime;
+            if (currentTime <= 0)
+            {
+                currentTime = 0;
+                GameOver(); // Время вышло - игрок проиграл
+            }
         }
     }
-    
-    private void OnApplicationQuit()
+
+    // Для бустера времени
+    public void AddLevelTime(float amount)
     {
-        Debug.Log("[GameManager] Выход из игры. Сохраняем прогресс...");
-        YG2.SaveProgress();
+        currentTime += amount;
+        Debug.Log($"[GameManager] Добавлено время! Осталось: {currentTime} сек.");
     }
 
-    
+    // Централизованный метод для получения монет (чтобы всегда работал бустер)
+    public void AddCoins(int baseAmount)
+    {
+        int finalAmount = Mathf.RoundToInt(baseAmount * CurrentMoneyMultiplier);
+        GameEvents.CoinsCollected(finalAmount);
+        Debug.Log($"[GameManager] Получено монет: {finalAmount} (Множитель: x{CurrentMoneyMultiplier})");
+    }
+
     public void GameOver()
     {
         if (isGameOver) return;
         isGameOver = true;
     
-        Debug.Log("[GameManager] 💀 GAME OVER! Показываю экран смерти...");
-        Debug.Log($"[GameManager] deathScreen = {deathScreen}");
-    
         YG2.SaveProgress();
         GameEvents.PlayerDied(); 
         Time.timeScale = 0f;
     
-        if (deathScreen != null)
-        {
-            deathScreen.SetActive(true);
-            Debug.Log("[GameManager] ✅ Экран смерти активирован!");
-        }
-        else
-        {
-            Debug.LogError("[GameManager] ❌ deathScreen НЕ НАЗНАЧЕН в Inspector!");
-        }
+        if (deathScreen != null) deathScreen.SetActive(true);
     }
 
     public void RestartLevel()
     {
         Time.timeScale = 1f;
-        
         YG2.SaveProgress();
-        
-        // Показать межуровневую рекламу ПЕРЕД перезагрузкой
-        if (YG2.isSDKEnabled)
-        {
-            YG2.InterstitialAdvShow();
-        }
-
+        if (YG2.isSDKEnabled) YG2.InterstitialAdvShow();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void BackToMenu()
     {
         Time.timeScale = 1f;
-        
         YG2.SaveProgress();
-        
-        // Показать межуровневую рекламу ПЕРЕД выходом в меню
-        if (YG2.isSDKEnabled)
-        {
-            YG2.InterstitialAdvShow();
-        }
-
+        if (YG2.isSDKEnabled) YG2.InterstitialAdvShow();
         SceneManager.LoadScene("Menu");
     }
-    
-    // Фоновая страховка: сохраняем каждые 60 секунд
+
     private System.Collections.IEnumerator AutoSaveRoutine()
     {
         var waitForSeconds = new WaitForSeconds(60f);
         while (true)
         {
             yield return waitForSeconds;
-            // Сохраняем только если игра не на паузе
-            if (Time.timeScale > 0f) 
-            {
-                Debug.Log("[GameManager] Автосохранение...");
-                YG2.SaveProgress();
-            }
+            if (Time.timeScale > 0f) YG2.SaveProgress();
         }
     }
 }
