@@ -1,0 +1,36 @@
+{
+    "maxLevelReached": 0,
+    "enemiesRepelled": 3,
+    "enemiesKilled": 1,
+    "levelsCompleted": 0,
+    "coinsCollected": 30,
+    "deathsCount": 0,
+    "crystalsCollected": 0,
+    "lastDailyRewardDate": "2026-11-19",
+    "claimedAchievementIds": [],
+    "claimedQuestIds": [],
+    "achievementIds": [
+        "first_kill",
+        "kill_50",
+        "first_level",
+        "complete_10",
+        "first_death"
+    ],
+    "achievementProgress": [
+        1,
+        1,
+        0,
+        0,
+        0
+    ],
+    "lastQuestsDate": "2026-11-19",
+    "intExample": 5,
+    "strExample": "Hello!",
+    "boolExample": [
+        false,
+        false,
+        false,
+        false
+    ],
+    "idSave": 5
+}

@@ -104,3 +104,24 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+
+# JetBrains Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# WebGL / Yandex Games build archives in root
+/*.zip
+
+/ProjectSettings/Packages/com.unity.connect.share/Settings.json

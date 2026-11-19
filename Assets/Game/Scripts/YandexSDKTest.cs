@@ -95,7 +95,7 @@ public class YandexSDKTest : MonoBehaviour
     {
         Debug.Log("=== ПРОВЕРКА UI ===");
     
-        var currencyUI = FindObjectOfType<CurrencyUI>();
+        var currencyUI = FindAnyObjectByType<CurrencyUI>();
         if (currencyUI == null)
         {
             Debug.LogError("❌ CurrencyUI НЕ НАЙДЕН на сцене!");
