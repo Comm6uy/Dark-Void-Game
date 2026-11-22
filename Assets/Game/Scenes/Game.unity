@@ -11763,6 +11763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   deathScreen: {fileID: 1004475491}
+  levelTime: 300
 --- !u!4 &1259471283
 Transform:
   m_ObjectHideFlags: 0
@@ -18139,16 +18140,16 @@ PrefabInstance:
       objectReference: {fileID: 562547232}
     - target: {fileID: 4011578780700465025, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
       propertyPath: m_Size.x
-      value: 0.06
+      value: 1.625
       objectReference: {fileID: 0}
     - target: {fileID: 4011578780700465025, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
       propertyPath: m_Size.y
-      value: 0.06
+      value: 2.9375
       objectReference: {fileID: 0}
     - target: {fileID: 4011578780700465025, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 8546485020818550835, guid: de3ca32c72a8d6b478bffe980966a4cf, type: 3}
+      objectReference: {fileID: -1364186699980225264, guid: a7e5677cf293ea24ca11d6b82a3376ac, type: 3}
     - target: {fileID: 4011578780700465025, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -18200,6 +18201,10 @@ PrefabInstance:
     - target: {fileID: 5455539625037470031, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6932190956553348200, guid: 08c70b97825ffe04a9ec5c27d96c55cc, type: 3}
+      propertyPath: m_Speed
+      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

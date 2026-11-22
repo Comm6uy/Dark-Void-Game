@@ -1,10 +1,10 @@
 {
     "maxLevelReached": 0,
-    "enemiesRepelled": 3,
-    "enemiesKilled": 1,
+    "enemiesRepelled": 15,
+    "enemiesKilled": 5,
     "levelsCompleted": 0,
     "coinsCollected": 30,
-    "deathsCount": 0,
+    "deathsCount": 5,
     "crystalsCollected": 0,
     "lastDailyRewardDate": "2026-11-19",
     "claimedAchievementIds": [],
@@ -18,12 +18,12 @@
     ],
     "achievementProgress": [
         1,
-        1,
+        4,
         0,
         0,
-        0
+        1
     ],
-    "lastQuestsDate": "2026-11-19",
+    "lastQuestsDate": "2026-11-22",
     "intExample": 5,
     "strExample": "Hello!",
     "boolExample": [
@@ -32,5 +32,5 @@
         false,
         false
     ],
-    "idSave": 5
+    "idSave": 34
 }
