@@ -16,17 +16,28 @@ MonoBehaviour:
   m_DefaultGameObject: {fileID: 0}
   m_DefaultColliderType: 1
   m_TilingRules:
-  - m_Id: 0
+  - m_Id: 3
     m_Sprites:
-    - {fileID: -749121858, guid: bdb48d20ad9851c408c543a2dffc7d95, type: 3}
-    - {fileID: 807722731, guid: bdb48d20ad9851c408c543a2dffc7d95, type: 3}
-    - {fileID: -1274503344, guid: bdb48d20ad9851c408c543a2dffc7d95, type: 3}
-    - {fileID: 764581132, guid: bdb48d20ad9851c408c543a2dffc7d95, type: 3}
-    - {fileID: -1925997870, guid: bdb48d20ad9851c408c543a2dffc7d95, type: 3}
-    - {fileID: 1322177670, guid: bdb48d20ad9851c408c543a2dffc7d95, type: 3}
-    - {fileID: 956897618, guid: bdb48d20ad9851c408c543a2dffc7d95, type: 3}
-    - {fileID: -1617113835, guid: bdb48d20ad9851c408c543a2dffc7d95, type: 3}
-    - {fileID: 372590056, guid: bdb48d20ad9851c408c543a2dffc7d95, type: 3}
+    - {fileID: 1083210203, guid: 23966e5f932e70a4a9abc18f4015d85d, type: 3}
+    - {fileID: 1083210203, guid: 23966e5f932e70a4a9abc18f4015d85d, type: 3}
+    - {fileID: 1083210203, guid: 23966e5f932e70a4a9abc18f4015d85d, type: 3}
+    - {fileID: 1083210203, guid: 23966e5f932e70a4a9abc18f4015d85d, type: 3}
+    - {fileID: 1083210203, guid: 23966e5f932e70a4a9abc18f4015d85d, type: 3}
+    - {fileID: 1083210203, guid: 23966e5f932e70a4a9abc18f4015d85d, type: 3}
+    - {fileID: 1083210203, guid: 23966e5f932e70a4a9abc18f4015d85d, type: 3}
+    - {fileID: 1083210203, guid: 23966e5f932e70a4a9abc18f4015d85d, type: 3}
+    - {fileID: 1083210203, guid: 23966e5f932e70a4a9abc18f4015d85d, type: 3}
+    - {fileID: 1083210203, guid: 23966e5f932e70a4a9abc18f4015d85d, type: 3}
+    - {fileID: 1083210203, guid: 23966e5f932e70a4a9abc18f4015d85d, type: 3}
+    - {fileID: -1727373850, guid: 23966e5f932e70a4a9abc18f4015d85d, type: 3}
+    - {fileID: -863420649, guid: 23966e5f932e70a4a9abc18f4015d85d, type: 3}
+    - {fileID: 787458249, guid: 23966e5f932e70a4a9abc18f4015d85d, type: 3}
+    - {fileID: -274825851, guid: 23966e5f932e70a4a9abc18f4015d85d, type: 3}
+    - {fileID: -941072000, guid: 23966e5f932e70a4a9abc18f4015d85d, type: 3}
+    - {fileID: 329481174, guid: 23966e5f932e70a4a9abc18f4015d85d, type: 3}
+    - {fileID: 1001469858, guid: 23966e5f932e70a4a9abc18f4015d85d, type: 3}
+    - {fileID: -16095553, guid: 23966e5f932e70a4a9abc18f4015d85d, type: 3}
+    - {fileID: 473319001, guid: 23966e5f932e70a4a9abc18f4015d85d, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
